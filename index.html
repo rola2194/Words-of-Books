@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words of the Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        textarea {
+            width: 90%;
+            max-width: 600px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #controls {
+            margin: 10px 0;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        #results {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #f4f4f9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Words of the Book</h1>
+    <textarea id="inputText" rows="10" placeholder="Insert text here..."></textarea>
+    <div id="controls">
+        <button id="analyzeButton">Count ⚙️</button>
+        <select id="limitSelector">
+            <option value="10">First 10 Words</option>
+            <option value="20">First 20 Words</option>
+            <option value="30">First 30 Words</option>
+            <option value="100">First 100 Words</option>
+            <option value="0">All the Words</option>
+        </select>
+    </div>
+    <h2>Results:</h2>
+    <div id="results"></div>
+    <script src="app.js"></script>
+</body>
+</html>
